@@ -1,0 +1,111 @@
+/* css rest */
+header,
+section,
+footer {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* todo */
+#todoapp {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 5px 5px;
+  background-color: #ffffff;
+}
+#todoapp header {
+  padding: 0 20px;
+}
+#todoapp header h1 {
+  padding: 0 0 10px;
+  font-size: 36px;
+  text-align: center;
+}
+#todoapp header input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  border: 1px solid #999;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) inset;
+  font-size: 24px;
+  line-height: 1.4em;
+}
+#todoapp .todo {
+  padding: 10px 20px 10px 0;
+}
+#todoapp section {
+  padding: 0 20px;
+}
+#todoapp .todo-list {
+  font-size: 24px;
+}
+#todoapp .todo-list li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+#todoapp .todo-list .view {
+  position: relative;
+}
+#todoapp .todo-list .view:hover .destroy {
+  display: block;
+}
+#todoapp .todo-list .edit {
+  display: none;
+}
+#todoapp .done {
+  color: #777;
+  text-decoration: line-through;
+}
+#todoapp .editing .edit {
+  display: block;
+  width: 100%;
+  padding: 3px 0 5px 18px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) inset;
+  font-size: 24px;
+}
+#todoapp .editing .view {
+  display: none;
+}
+#todoapp .destroy {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: url(../destroy.png) no-repeat scroll 0 0;
+  cursor: pointer;
+}
+#todoapp footer {
+  padding: 0 20px;
+  border-top: 1px solid #ededed;
+  border-radius: 0 0 5px 5px;
+  color: #555;
+  line-height: 37px;
+  background-color: #f4fce8;
+}
+#todoapp footer button {
+  float: right;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding: 0 10px 1px;
+  border-width: 0;
+  border-radius: 12px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  line-height: 20px;
+  color: #555555;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+  cursor: pointer;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Todos</title>
+	<link rel="stylesheet" type="text/css" href="css/todo.css">
+</head>
+<body>
+	<div id="todoapp">
+		<header>
+			<h1>备忘录</h1>
+			<input class="j-new-todo" placeholder="你需要完成什么？">
+		</header>
+		<section class="j-main">
+			<div class="todo">
+				<input type="checkbox" class="j-toggle-all">
+				<label for="toggle-all">标记所有任务为已完成状态</label>
+			</div>
+			<ul class="todo-list j-todo-list">
+				<!-- <li class="todo editing">
+					<div class="view">
+						<input type="checkbox" class="toggle">
+						<label>item1</label>
+						<div class="destory"></div>
+					</div>
+					<input type="text" class="edit" value="item1">
+				</li>
+				<li class="todo done">
+					<div class="view">
+						<input type="checkbox" class="toggle">
+						<label>item2</label>
+						<div class="destory"></div>
+					</div>
+					<input type="text" class="edit" value="item1">
+				</li>
+				<li class="todo">
+					<div class="view">
+						<input type="checkbox" class="toggle">
+						<label>item3</label>
+						<div class="destory"></div>
+					</div>
+					<input type="text" class="edit" value="item1">
+				</li> -->
+			</ul>
+		</section>
+		<footer>
+			<button>清除&nbsp;<span class="js-clear-completed">1</span>&nbsp;个已完成任务</button>
+			<div class="todo-count">还剩&nbsp;<b class="j-todo-count">1</b>&nbsp;任务</div>
+		</footer>
+	</div>
+
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/backbone.localStorage.js"></script>
+	<script src="js/todo.js"></script>
+	<!-- templates -->
+	<script type="text/template" id="template-1">
+		<div class="view j-view">
+			<input type="checkbox" class="j-toggle" <%= done ? 'checked="checked"' : '' %> >
+			<label><%= title %></label>
+			<div class="destroy j-destroy"></div>
+		</div>
+		<input type="text" class="edit j-edit" value="<%= title %>">
+	</script>
+	<script type="text/template" id="template-2">
+		<% if (done) { %>
+			<button class="j-clear-completed">清除&nbsp;<span><%= done %></span>&nbsp;个已完成任务</button>
+		<% } %>
+		<div class="todo-count">还剩&nbsp;<b class="j-todo-count"><%= remaining %></b>&nbsp;任务</div>
+	</script>
+</body>
+</html>
